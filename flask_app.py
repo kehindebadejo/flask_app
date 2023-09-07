@@ -13,7 +13,7 @@ def get_info():
     current_day = datetime.now(pytz.utc).strftime('%A')
 
     # Get the current UTC time
-    current_time = datetime.now(pytz.utc).strftime('%Y-%m-%d %H:%M:%S')
+    current_time = datetime.now(pytz.utc).strftime('%Y-%m-%dT%H:%M:%S')
 
     # Construct Github URLs
     github_file_url = 'https://github.com/your_username/your_repo/blob/main/your_file.py'
@@ -22,10 +22,10 @@ def get_info():
     response_data = {
         'slack_name': slack_name,
         'current_day': current_day,
-        'current_utc_time': current_time,
+        'utc_time': current_time,
         'track': track,
         'github_file_url': github_file_url,
-        'github_repo_utl': github_repo_url,
+        'github_repo_url': github_repo_url,
         'status_code': 200
     }
 
